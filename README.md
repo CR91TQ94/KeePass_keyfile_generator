@@ -4,7 +4,7 @@ This script is a KeePass keyfile generator, which allows you to create a secure 
 
 ### How It Works:
 
-1.  **Brain-Key Input**: The script takes a memorable brain-key input (e.g., "abcd").
+1.  **Brain-Key Input**: The script takes a memorable brain-key input (e.g., "password").
 2.  **Three hashing types**: It calculates the hash of the input and stores it as SHA-2 (256), or Keccak (512), or Shake (256/variable)
        ***SHA2_KeePass_keyfile.py***: It calculates the SHA-2/256 hash of the input and stores it.
        ***KECCAK_KeePass_keyfile.py***: It calculates the Keccak-512 hash of the input and stores it.
