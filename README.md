@@ -1,9 +1,9 @@
 # KeePass Python keyfile generator (memorable)
 
-This script is a KeePass keyfile generator, which allows you to create a secure keyfile using a memorable brain-key. KeePass is a widely-used password manager that enhances security by requiring a keyfile in addition to a master password. These scripts take a user-provided brain-key, compute a hash, and then processes this hash to create a SHA-256 hash. The result is formatted into an XML document that serves as the KeePass keyfile.
+This script is a KeePass keyfile generator, which allows you to create a secure keyfile using a memorable brain-key.  KeePass is a widely-used password manager that enhances security by requiring a keyfile in addition to a master password.  These scripts take a user-provided brain-key, compute a hash, and then processes this hash to create a SHA-256 hash.  The result is formatted into an XML document that serves as the KeePass keyfile.
 
 ### Three types of hashing: 
-These scripts offer three distinct methods for processing your brain-key: standard SHA-256, Keccak-512, and SHAKE-256 with a variable output length. You may select the type that best suits your needs. The SHAKE algorithm provides the flexibility to choose the output length according to your preference.
+These scripts offer three distinct methods for processing your brain-key: standard SHA-256, Keccak-512, and SHAKE-256 with a variable output length.  You may select the type that best suits your needs.  The SHAKE algorithm provides the flexibility to choose the output length according to your preference.
 
 ### How It Works:
 
@@ -18,7 +18,7 @@ These scripts offer three distinct methods for processing your brain-key: standa
 
 ### Security Warning:
 
-Using this method to generate KeePass keyfiles can be very dangerous if not used properly. The security of your keyfile relies heavily on the secrecy and strength of your brain-key. If the brain-key is weak or easily guessable, it could lead to someone breaking your keys and gaining unauthorized access to your KeePass database. Always use a strong, unique brain-key and handle the generated keyfile with extreme caution.
+Using this method to generate KeePass keyfiles can be very dangerous if not used properly.  The security of your keyfile relies heavily on the secrecy and strength of your brain-key.  If the brain-key is weak or easily guessable, it could lead to someone breaking your keys and gaining unauthorized access to your KeePass database.  Always use a strong, unique brain-key and handle the generated keyfile with extreme caution.
 
 * * * * *
 
