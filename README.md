@@ -5,10 +5,13 @@ This script is a KeePass keyfile generator, which allows you to create a secure 
 ### How It Works:
 
 1.  **Brain-Key Input**: The script takes a memorable brain-key input (e.g., "abcd").
-2.  **Keccak-512 Hash**: It calculates the Keccak-512 hash of the input and stores it.
-3.  **Raw Conversion**: The Keccak-512 hash is converted from HEX to raw bytes.
-4.  **SHA-256 Hash**: The script then computes the SHA-256 hash of the raw bytes and extracts the first 8 characters.
-5.  **XML Keyfile Creation**: An XML document is generated, embedding both hashes, and saved as a `.keyx` file.
+2.  **Three hashing types**: It calculates the hash of the input and stores it as SHA-2 (256), or Keccak (512), or Shake (256/variable)
+       ***SHA2_KeePass_keyfile.py***: It calculates the SHA-2/256 hash of the input and stores it.
+       ***KECCAK_KeePass_keyfile.py***: It calculates the Keccak-512 hash of the input and stores it.
+       ****SHAKE_KeePass_keyfile.py****: It calculates the SHAKE(-256) hash of the input with a free output length (example of 555 bits/ 4440 hex) and stores it.
+4.  **Raw Conversion**: The hash is converted from HEX to raw bytes.
+5.  **SHA-256 Hash**: The script then computes the SHA-256 hash of the raw bytes and extracts the first 8 characters.
+6.  **XML Keyfile Creation**: An XML document is generated, embedding both hashes, and saved as a `.keyx` file.
 
 ### Security Warning:
 
