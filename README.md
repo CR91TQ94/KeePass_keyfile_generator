@@ -9,9 +9,9 @@ These scripts offer three distinct methods for processing your brain-key: standa
 
 1.  **Brain-Key Input**: The script takes a memorable brain-key input (e.g., "password").
 2.  **Three hashing types**: It calculates the hash of the input and stores it as SHA-2 (256), or Keccak (512), or Shake (256/variable)
-       ***SHA2_KeePass_keyfile.py***: It calculates the SHA-2/256 hash of the input and stores it.
-       ***KECCAK_KeePass_keyfile.py***: It calculates the Keccak-512 hash of the input and stores it.
-       ****SHAKE_KeePass_keyfile.py****: It calculates the SHAKE(-256) hash of the input with a free output length (example of 555 bits/ 4440 hex) and stores it.
+       a) ***SHA2_KeePass_keyfile.py***: It calculates the SHA-2/256 hash of the input and stores it.
+       b) ***KECCAK_KeePass_keyfile.py***: It calculates the Keccak-512 hash of the input and stores it.
+       c) ****SHAKE_KeePass_keyfile.py****: It calculates the SHAKE(-256) hash of the input with a free output length (example of 555 bits/ 4440 hex) and stores it.
 4.  **Raw Conversion**: The hash is converted from HEX to raw bytes.
 5.  **SHA-256 Hash**: The script then computes the SHA-256 hash of the raw bytes and extracts the first 8 characters.
 6.  **XML Keyfile Creation**: An XML document is generated, embedding both hashes, and saved as a `.keyx` file.
