@@ -1,6 +1,9 @@
 # KeePass Python keyfile generator (memorable)
 
-This script is a KeePass keyfile generator, which allows you to create a secure keyfile using a memorable brain-key. KeePass is a widely-used password manager that enhances security by requiring a keyfile in addition to a master password. This script takes a user-provided brain-key, computes a Keccak-512 hash, and then processes this hash to create a SHA-256 hash. The result is formatted into an XML document that serves as the KeePass keyfile.
+This script is a KeePass keyfile generator, which allows you to create a secure keyfile using a memorable brain-key. KeePass is a widely-used password manager that enhances security by requiring a keyfile in addition to a master password. These scripts take a user-provided brain-key, compute a hash, and then processes this hash to create a SHA-256 hash. The result is formatted into an XML document that serves as the KeePass keyfile.
+
+### Three types of hashing: 
+These scripts offer three distinct methods for processing your brain-key: standard SHA-256, Keccak-512, and SHAKE-256 with a variable output length. You may select the type that best suits your needs. The SHAKE algorithm provides the flexibility to choose the output length according to your preference.
 
 ### How It Works:
 
