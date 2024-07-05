@@ -1,7 +1,7 @@
 from Crypto.Hash import keccak, SHA256
 import binascii
 
-# Textual input
+# Textual input ENTER YOUR BRAINKEY HERE, read instructions before!!!
 input_text = "abcd"
 
 # Calculate KECCAK-512 hash of the input
