@@ -16,11 +16,8 @@ import binascii
 # to keep your brain-key secure to protect your 
 # KeePass database.
 
-
-# HERE YOU WILL ENTER YOUR PASSWORD/PASSPHRASE, between quotemarks.
-# REMEMBER: even 'space', is calculated!
-input_text = "password"
-
+# Prompt the user to enter their password/passphrase
+input_text = input("Enter your password/passphrase: ")
 
 # Calculate SHA-256 hash of the input
 sha256_hash = hashlib.sha256(input_text.encode('utf-8')).hexdigest()
@@ -43,10 +40,7 @@ xml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 </KeyFile>
 """
 
-# Save the XML document as a file with .keyx extension 
-# >>>>>>>>>>>>>>>>>> HERE YOU ENTER YOUR FILENAME AS YOU WISH 
-# >>>>>>>>>>>>>>>>>> rename it and make more obscure, naming it 
-# >>>>>>>>>>>>>>>>>> like x, or 123 or similar.
-file_name = "SHA2key.keyx"
+# Prompt the user to enter the filename
+file_name = input("Enter the filename (with .keyx extension): ")
 with open(file_name, "w") as file:
     file.write(xml_content)
