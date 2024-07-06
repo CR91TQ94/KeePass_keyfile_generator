@@ -40,8 +40,7 @@ xml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
         <Version>2.0</Version>
     </Meta>
     <Key>
-        <Data Hash="{B}">
-            {A}
+        <Data Hash="{B}">{A}
         </Data>
     </Key>
 </KeyFile>
