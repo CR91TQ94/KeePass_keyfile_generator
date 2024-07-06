@@ -1,7 +1,7 @@
 from Crypto.Hash import keccak, SHA256
 import binascii
 
-# >>>>>>>>>>>>>>>>>> Security Warning:
+# Security Warning:
 # Using this method to generate KeePass keyfiles can be very 
 # dangerous if not used properly. The security of your keyfile 
 # relies heavily on the secrecy and strength of your brain-key. 
@@ -10,16 +10,14 @@ import binascii
 # to your KeePass database. Always use a strong, unique brain-key 
 # and handle the generated keyfile with extreme caution.
 # 
-# >>>>>>>>>>>>>>>>>> How it works:
+# How it works:
 # This script will generate a secure keyfile 
 # for KeePass using Keccak-512 hashing. Remember 
 # to keep your brain-key secure to protect your 
 # KeePass database.
 
-
-# >>>>>>>>>>>>>>>>>> HERE YOU WILL ENTER YOUR PASSWORD/PASSPHRASE, between quotemarks.
-# >>>>>>>>>>>>>>>>>> REMEMBER: even 'space', is calculated!
-input_text = "password"
+# Prompt the user to enter their password/passphrase
+input_text = input("Enter your password/passphrase: ")
 
 # Calculate KECCAK-512 hash of the input
 keccak_hash = keccak.new(digest_bits=512)
@@ -46,10 +44,7 @@ xml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 </KeyFile>
 """
 
-# Save the XML document as a file with .keyx extension 
-# >>>>>>>>>>>>>>>>>> HERE YOU ENTER YOUR FILENAME AS YOU WISH 
-# >>>>>>>>>>>>>>>>>> rename it and make more obscure, naming it 
-# >>>>>>>>>>>>>>>>>> like x, or 123 or similar.
-file_name = "KECCAKkey.keyx"
+# Prompt the user to enter the filename
+file_name = input("Enter the filename (with .keyx extension): ")
 with open(file_name, "w") as file:
     file.write(xml_content)
